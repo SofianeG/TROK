@@ -1,9 +1,12 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
+import normalize from 'react-native-normalize';
 
-export default function LoginScreenIcon() {
 
-    const LoginScreenIcon =`<svg width="266px" height="101px" viewBox="0 0 266 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+export default function LoginScreenIcon({width,height}) {
+
+    const LoginScreenIcon =`<svg width=${width} height=${height} viewBox="0 0 266 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>8D15F143-0FC5-4651-B0FB-840D734FDB05</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="0-Loading" transform="translate(-55.000000, -242.000000)">
