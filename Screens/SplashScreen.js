@@ -3,34 +3,32 @@ import {View,StyleSheet,Text} from 'react-native'
 
 import SplashScreenIcon from '../assets/Icons/SplashScreenIcon'
 
-export class SplashScreen extends Component {
-    render() {
+function SplashScreen() {
         return (
            <View style={styles.container}>
-                <View style={styles.wrapper} >
-                    <SplashScreenIcon/>
-                    <Text style={styles.wrapper}>Le troc participatif et solidaire</Text>
+                    <View>
+                        <SplashScreenIcon/>
+                    </View>
+                        <Text style={styles.text}>Le troc participatif et solidaire</Text>  
                 </View>
-           </View>
         )
-    } 
 }
 
 const styles= StyleSheet.create({
+
     container:{
         backgroundColor:"#40CE6A",
-        justifyContent:"center",
-        alignItems:"center",
-        height:830,
-        width:375
+        height:812,
+        width:375,
+        paddingHorizontal:54,
+        paddingTop:242,
     },
-    wrapper:{
-        marginVertical:41,
-        fontSize:22,
-        alignItems:"center",
-        color:"white"
-    },
-   
-})
+    text:{
+        fontSize:21.6,
+        color:"#FFFFFF",
+        paddingTop:41,
+        letterSpacing: -0.24,
+        lineHeight: 28,
+}})
 
 export default SplashScreen;
