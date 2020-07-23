@@ -1,9 +1,9 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
 
-export default function arrowIcon() {
+export default function ArrowIcon() {
 
-    const arrowIcon =`<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    const ArrowIcon =`<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>D94CB404-EA13-450C-A1E8-DF585F828A9C</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="UI-KIT" transform="translate(-115.000000, -20.000000)">
@@ -15,7 +15,7 @@ export default function arrowIcon() {
     </g>
 </svg>`;
 
-    const arrowIconSvg = () => <SvgXml xml={arrowIcon} width="60%" height="60%"  />;
+    const ArrowIconSvg = () => <SvgXml xml={ArrowIcon} width="24px" height="24px"  />;
 
-    return <arrowIconSvg />;
+    return <ArrowIconSvg />;
 }

@@ -14,7 +14,7 @@ function CreateMyAccountScreen()  {
                         <ArrowIcon/>
                     </View>
                     <View style={{paddingTop:10, }}>
-                        <Text style={{backgroundColor:"green"}}></Text>
+                        <Text style={{backgroundColor:"#40CE6A",lineHeight:4,}}>-</Text>
                     </View>
                     <View style={styles.wrapper_bottom}>
                         <View style={styles.first_bloc}>
@@ -28,7 +28,7 @@ function CreateMyAccountScreen()  {
                                 </View>
                                 </View>
                                 </View>
-                            <Text style={styles.sub_input}>Vous recevrez un email de confirmation</Text>
+                            <Text style={styles.sub_input}>Vous recevrez un email de confirmatio</Text>
                         </View>
                         <View style={styles.second_bloc}>
                             <Text style={{marginVertical:12,color:"#3A3A3A"}}>Ensuite choisissez un mot de passe</Text>
@@ -51,9 +51,7 @@ function CreateMyAccountScreen()  {
 
 const styles= StyleSheet.create({
 
-    // container:{
-      
-    // },
+   
     wrapper_top: {
         backgroundColor:"#40CE6A",
         height:70,
