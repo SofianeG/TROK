@@ -1,9 +1,8 @@
-import React from "react";
-import { SvgXml } from "react-native-svg";
+import React from "./node_modules/react";
+import { SvgXml } from "./node_modules/react-native-svg";
 
 export default function ArrowIcon() {
-
-    const ArrowIcon =`<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  const ArrowIcon = `<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>D94CB404-EA13-450C-A1E8-DF585F828A9C</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="UI-KIT" transform="translate(-115.000000, -20.000000)">
@@ -15,7 +14,9 @@ export default function ArrowIcon() {
     </g>
 </svg>`;
 
-    const ArrowIconSvg = () => <SvgXml xml={ArrowIcon} width="24px" height="24px"  />;
+  const ArrowIconSvg = () => (
+    <SvgXml xml={ArrowIcon} width="24px" height="24px" />
+  );
 
-    return <ArrowIconSvg />;
+  return <ArrowIconSvg />;
 }
