@@ -1,9 +1,8 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
 
-export default function CreateMyAccountPictureIcon() {
-
-    const CreateMyAccountPictureIcon =`<svg width="133px" height="133px" viewBox="0 0 133 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+export default function AccountPictureIcon() {
+  const AccountPictureIcon = `<svg width="133px" height="133px" viewBox="0 0 133 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>DD70A7F3-56DA-487E-AD14-B0BCBE62BA51</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="1.5-Log-in" transform="translate(-114.000000, -227.000000)">
@@ -17,7 +16,9 @@ export default function CreateMyAccountPictureIcon() {
     </g>
 </svg>`;
 
-    const CreateMyAccountPictureIconSvg = () => <SvgXml xml={CreateMyAccountPictureIcon} width="60%" height="60%"  />;
+  const AccountPictureIconSvg = () => (
+    <SvgXml xml={CreateMyAccountPictureIcon} width="60%" height="60%" />
+  );
 
-    return <CreateMyAccountPictureIconSvg />;
+  return <AccountPictureIconSvg />;
 }
