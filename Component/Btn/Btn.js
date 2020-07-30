@@ -1,9 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import GoogleIcon from "../../assets/Icons/googleIcon/GoogleIcon";
-import FacebookIcon from "../../assets/Icons/facebookIcon/FacebookIcon";
+import GoogleIcon from "../../assets/Icons/GoogleIcon/GoogleIcon";
+import FacebookIcon from "../../assets/Icons/FacebookIcon/FacebookIcon";
 
-const CustomButton = (props) => {
+import normalize from "react-native-normalize";
+
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
+
+const Btn = (props) => {
   return (
     <View
       style={[
@@ -42,11 +49,11 @@ const CustomButton = (props) => {
 
 const styles = StyleSheet.create({
   button: {
-    width: 236,
-    borderRadius: 26,
-    height: 52,
-    paddingVertical: 16,
+    width: wp("63.03%"),
+    borderRadius: normalize(26),
+    height: normalize(52),
+    paddingVertical: hp("1.97%"),
   },
 });
 
-export default CustomButton;
+export default Btn;

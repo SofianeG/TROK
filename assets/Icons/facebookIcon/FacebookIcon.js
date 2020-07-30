@@ -1,9 +1,9 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
+import normalize from "react-native-normalize";
 
 export default function FacebookIcon() {
-
-    const FacebookIcon =`<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  const FacebookIcon = `<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>C82A0FB3-C2DA-49C4-814F-E4D73FD1CBB0</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="1-Log-in" transform="translate(-103.000000, -534.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -14,7 +14,9 @@ export default function FacebookIcon() {
     </g>
 </svg>`;
 
-    const FacebookIconSvg = () => <SvgXml xml={FacebookIcon} width="11px" height="20px"  />;
+  const FacebookIconSvg = () => (
+    <SvgXml xml={FacebookIcon} width={normalize(11)} height={normalize(20)} />
+  );
 
-    return <FacebookIconSvg />;
+  return <FacebookIconSvg />;
 }

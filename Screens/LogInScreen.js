@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   View,
   StyleSheet,
@@ -8,28 +8,29 @@ import {
 } from "react-native";
 import normalize from "react-native-normalize";
 
-import GoogleIcon from "../assets/Icons/googleIcon/GoogleIcon";
-import FacebookIcon from "../assets/Icons/facebookIcon/FacebookIcon";
+import Colors from "../assets/Style/Colors";
 
 import LoginScreenIcon from "../assets/Icons/LoginScreenIcon";
 
-import { useNavigation } from "@react-navigation/native";
-import CustomButton from "../Component/CustomButton/CustomButton";
+import Btn from "../Component/Btn/Btn";
+
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 function LogInScreen() {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.container}>
       <View style={styles.wrapper_top}>
         <ImageBackground
-          source={require("../assets/image_loginScreen.jpg")}
-          style={{ height: 396 }}
+          source={require("../assets/Image_hands_LoginScreen.jpg")}
+          style={styles.image_background}
         >
-          <View style={{ flex: 1, marginHorizontal: 20, marginVertical: 35 }}>
-            <LoginScreenIcon width={266} height={101} />
+          <View style={styles.wrapper_login_screen_icon}>
+            <LoginScreenIcon />
           </View>
-          <View style={{ marginHorizontal: 20, marginVertical: 30 }}>
+          <View style={styles.wrapper_top_text}>
             <Text style={styles.title}>Bienvenue</Text>
             <Text style={styles.sub_title}>
               L’application éco-responsable et solidaire de troc d’objets et de
@@ -40,31 +41,31 @@ function LogInScreen() {
       </View>
       <View style={styles.wrapper_bottom}>
         <TouchableOpacity>
-          <CustomButton
+          <Btn
             color="#6D7278"
             backgroundColor="#FFFFFF"
             text="Login avec Google"
-            fontSize={16}
-            paddingLeft={30}
+            fontSize={normalize(16)}
+            paddingLeft={wp("7.97%")}
             flexDirection="row"
             alignItems="center"
             justifyContent="space-between"
-            paddingRight={36}
+            paddingRight={wp("9.57%")}
             title="Google"
             // fontFamily='Open Sans Regular'
           />
         </TouchableOpacity>
         <TouchableOpacity style={styles.btn_facebook}>
-          <CustomButton
+          <Btn
             color="#FFFFFF"
             backgroundColor="#4B74FF"
             text="Login avec Facebook"
-            fontSize={16}
-            paddingLeft={34}
+            fontSize={normalize(16)}
+            paddingLeft={wp("9.04%")}
             flexDirection="row"
             alignItems="center"
             justifyContent="space-between"
-            paddingRight={18}
+            paddingRight={wp("4.78%")}
             title=""
             // fontFamily='Open Sans Regular'
           />
@@ -74,17 +75,9 @@ function LogInScreen() {
             <Text style={styles.mail_text}>Login avec mon mail</Text>
           </TouchableOpacity>
         </View>
-        <View style={{ marginVertical: 40 }}>
-          <TouchableOpacity onPress={() => navigation.navigate("AccountS")}>
-            <Text
-              style={{
-                textDecorationLine: "underline",
-                color: "white",
-                fontSize: 16,
-              }}
-            >
-              Se connecter
-            </Text>
+        <View style={styles.log_in}>
+          <TouchableOpacity>
+            <Text style={styles.log_in_text}>Se connecter</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -97,53 +90,67 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   wrapper_top: {
-    height: 396,
-    width: 376,
+    height: hp("48.76%"),
+    width: wp("100%"),
+  },
+  image_background: {
+    height: hp("48.76%"),
+    width: wp("100%"),
+  },
+  wrapper_top_text: {
+    marginHorizontal: normalize(20),
+    marginVertical: normalize(30),
+  },
+  wrapper_login_screen_icon: {
+    flex: 1,
+    marginHorizontal: wp("2.4%"),
+    marginVertical: hp("9.3%"),
   },
   wrapper_bottom: {
-    backgroundColor: "#40CE6A",
-    height: 416,
-    width: 376,
-    paddingHorizontal: 70,
-    paddingVertical: 45,
+    backgroundColor: Colors.main_green,
+    height: hp("51.24%"),
+    width: wp("100%"),
+    paddingHorizontal: wp("18.61%"),
+    paddingVertical: hp("5.54%"),
     alignItems: "center",
     alignSelf: "center",
   },
   title: {
-    height: 20,
-    width: 319,
     color: "#FFFFFF",
-    fontSize: 20,
+    fontSize: normalize(20),
     // Font:Open Sans Bold
-    letterSpacing: 0,
-    lineHeight: 20,
-    marginVertical: 18,
+    marginVertical: hp("2.21%"),
   },
   sub_title: {
-    height: 40,
     color: "#FFFFFF",
     // Font:Open Sans Regular
-    fontSize: 15,
-    letterSpacing: 0,
-    lineHeight: 20,
+    fontSize: normalize(15),
   },
   btn_facebook: {
-    marginVertical: 25,
+    marginVertical: hp("3.05%"),
   },
   btn_email: {
-    height: 52,
-    width: 236,
-    borderRadius: 26,
-    backgroundColor: "#40CE6A",
+    height: normalize(52),
+    width: normalize(236),
+    borderRadius: normalize(26),
+    backgroundColor: Colors.main_green,
     alignItems: "center",
     justifyContent: "space-evenly",
     borderWidth: 1,
     borderColor: "white",
   },
   mail_text: {
-    fontSize: 16,
+    fontSize: normalize(16),
     color: "#FFFFFF",
     // Font:Open Sans Regular
+  },
+  log_in: {
+    marginVertical: hp("2.92%"),
+  },
+  log_in_text: {
+    textDecorationLine: "underline",
+    color: "white",
+    fontSize: normalize(16),
   },
 });
 
