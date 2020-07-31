@@ -1,10 +1,9 @@
 import React from "react";
 import {} from "react-native";
 
-import SplashScreen from "./Screens/SplashScreen";
-
+import AccountScreen from "./Screens/AccountScreen";
 function App() {
-  return <SplashScreen />;
+  return <AccountScreen />;
 }
 
 export default App;
