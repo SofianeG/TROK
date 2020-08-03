@@ -19,7 +19,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function AccountScreenValidate() {
+function AccountValidateScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.wrapper_top}>
@@ -187,4 +187,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AccountScreenValidate;
+export default AccountValidateScreen;
