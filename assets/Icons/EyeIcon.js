@@ -1,9 +1,10 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
 
-export default function EyeIcon() {
+import normalize from "react-native-normalize";
 
-    const EyeIcon =`<svg width="23px" height="15px" viewBox="0 0 23 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+export default function EyeIcon({ width, height }) {
+  const EyeIcon = `<svg width="23px" height="15px" viewBox="0 0 23 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>FE07302D-95E9-4E56-B35C-A2EFF2BF7891</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="1.2-Log-in" transform="translate(-295.000000, -310.000000)" fill="#888787" fill-rule="nonzero">
@@ -16,8 +17,13 @@ export default function EyeIcon() {
 </svg>
 `;
 
-    const EyeIconSvg = () => <SvgXml xml={EyeIcon} width="23px" height="15px"  />;
+  const EyeIconSvg = () => (
+    <SvgXml
+      xml={EyeIcon}
+      width={(width = normalize(23))}
+      height={(height = normalize(15))}
+    />
+  );
 
-    return <EyeIconSvg />;
+  return <EyeIconSvg />;
 }
-

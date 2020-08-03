@@ -1,25 +1,48 @@
-import React, { Component } from "react";
-import { View, StyleSheet, Text } from "react-native";
-import Input from "../Component/Input/Input";
+import React from "react";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+
+import ArrowIcon from "../assets/Icons/ArrowIcon";
+
+import Input from "../Component/Input/input";
+import Colors from "../assets/Style/Colors";
+import normalize from "react-native-normalize";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 function AccountNameScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.wrapper_top}></View>
-      <View style={{ paddingTop: 10 }}>
-        <Text style={{ lineHeight: 2, backgroundColor: "#40CE6A" }}>-</Text>
+      <View style={styles.wrapper_top}>
+        <TouchableOpacity>
+          <ArrowIcon />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.wrapper_green_line}>
+        <Text style={styles.green_line}>-</Text>
       </View>
       <View style={styles.wrapper_bottom}>
-        <View style={styles.wrapper_bottom_top_text}>
-          <Text style={styles.title}> Quel est votre nom ? </Text>
-          <Text style={styles.sub_title}>
-            {" "}
-            Vous apparaitrez sous la forme Prénom.N sur la plateforme.
+        <View style={styles.inputs}>
+          <Text style={styles.name_text}>Quel est votre nom ? </Text>
+          <Text style={styles.name_platform}>
+            vous apparaitrez sous la forme Prénom.N sur la plateforme.
           </Text>
+          <View style={styles.input_surname}>
+            <Input placeholder={"Prénom"} />
+          </View>
+          <View style={styles.wrapper_input_name}>
+            <View style={styles.input_name}>
+              <Input placeholder={"Nom"} />
+            </View>
+          </View>
         </View>
         <View>
-          <Input style={styles.input} value={"Prénom"} />
-          <Input style={styles.input} value={"Nom"} style={styles.input} />
+          <TouchableOpacity>
+            <View style={styles.btn}>
+              <Text style={styles.btn_text}>Continuer</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -28,36 +51,78 @@ function AccountNameScreen() {
 
 const styles = StyleSheet.create({
   wrapper_top: {
-    backgroundColor: "#40CE6A",
-    height: 70,
+    backgroundColor: Colors.main_green,
+    height: normalize(70),
+    paddingTop: normalize(31),
+    paddingLeft: normalize(11),
+  },
+  wrapper_green_line: {
+    paddingTop: normalize(10),
+  },
+  green_line: {
+    backgroundColor: Colors.main_green,
+    lineHeight: normalize(2),
   },
   wrapper_bottom: {
-    paddingTop: 30,
-    paddingLeft: 15,
-    // marginHorizontal:15,
-    // backgroundColor:'pink'
+    marginHorizontal: normalize(15),
+    height: hp("82%"),
+    justifyContent: "space-between",
   },
-  title: {
-    color: "#40CE6A",
+  name_text: {
+    color: Colors.main_green,
+    fontSize: normalize(16),
     // font-family: Open Sans Bold;
-    fontSize: 16,
-    fontWeight: "bold", // font-weight: 900;
-    letterSpacing: 0,
-    lineHeight: 20,
   },
-  sub_title: {
-    fontSize: 12,
-    lineHeight: 20,
-    paddingVertical: 12,
-    color: "#3A3A3A",
+  name_platform: {
+    marginVertical: normalize(12),
+    color: Colors.main_grey,
+    fontSize: normalize(12),
+    // font-family: Open Sans Regular;
   },
-  input: {
-    height: 42,
-    width: 344,
+  inputs: {
+    paddingTop: normalize(30),
+  },
+  input_surname: {
+    width: normalize(344, "width"),
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: Colors.main_white,
     borderWidth: 1,
-    borderRadius: 1,
-    backgroundColor: "blue",
-    // fontFamily:Open Sans Bold
+    borderColor: Colors.main_input,
+    height: normalize(42),
+    borderRadius: normalize(1),
+    paddingLeft: normalize(12),
+  },
+  input_name: {
+    width: normalize(344, "width"),
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: Colors.main_white,
+    borderWidth: 1,
+    borderColor: Colors.main_input,
+    height: normalize(42),
+    borderRadius: normalize(1),
+    paddingLeft: normalize(12),
+  },
+  wrapper_input_name: {
+    paddingTop: normalize(16),
+  },
+  btn: {
+    height: normalize(42),
+    borderRadius: normalize(26),
+    backgroundColor: Colors.btn_AccountScreen,
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: normalize(70),
+  },
+  btn_text: {
+    marginHorizontal: normalize(80),
+    color: Colors.main_white,
+    // font-family: Open Sans Regular;
+    fontSize: normalize(16),
+    width: normalize(72),
   },
 });
 

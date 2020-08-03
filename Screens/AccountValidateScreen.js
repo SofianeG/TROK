@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import RedCrossIcon from "../assets/Icons/RedCrossIcon/RedCrossIcon";
+import ValidateIcon from "../assets/Icons/ValidateIcon/ValidateIcon";
 import EyeIcon from "../assets/Icons/EyeIcon";
 import ArrowIcon from "../assets/Icons/ArrowIcon";
 
@@ -19,7 +19,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-function AccountScreen() {
+function AccountValidateScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.wrapper_top}>
@@ -41,8 +41,8 @@ function AccountScreen() {
               <Input placeholder={"votre adresse email"} style={styles.input} />
               <View style={styles.Icons}>
                 <EyeIcon />
-                <View style={styles.RedCrossIcon}>
-                  <RedCrossIcon />
+                <View style={styles.ValidateIcon}>
+                  <ValidateIcon />
                 </View>
               </View>
             </View>
@@ -60,8 +60,8 @@ function AccountScreen() {
                 style={(fontSize = normalize(12))}
               />
               <View style={styles.Icons}>
-                <View style={styles.RedCrossIcon}>
-                  <RedCrossIcon />
+                <View style={styles.ValidateIcon}>
+                  <ValidateIcon />
                 </View>
               </View>
             </View>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   btn: {
     height: normalize(42),
     borderRadius: normalize(26),
-    backgroundColor: Colors.btn_AccountScreen,
+    backgroundColor: Colors.btn_AccountScreenValidate,
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: normalize(70),
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: Colors.main_white,
     borderWidth: 1,
-    borderColor: main_input,
+    borderColor: Colors.main_input,
     height: normalize(42),
     borderRadius: normalize(1),
     paddingLeft: normalize(12),
@@ -182,9 +182,9 @@ const styles = StyleSheet.create({
     paddingRight: normalize(15),
     flexDirection: "row",
   },
-  RedCrossIcon: {
+  ValidateIcon: {
     paddingLeft: normalize(13),
   },
 });
 
-export default AccountScreen;
+export default AccountValidateScreen;
