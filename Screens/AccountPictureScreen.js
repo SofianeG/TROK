@@ -4,13 +4,8 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import ArrowIcon from "../assets/Icons/ArrowIcon";
 import AccountPictureIcon from "../assets/Icons/AccountPictureIcon";
 
-import Input from "../Component/Input/input";
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
 
 function AccountPictureScreen() {
   return (
