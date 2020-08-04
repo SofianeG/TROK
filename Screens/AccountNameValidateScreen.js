@@ -6,6 +6,9 @@ import ArrowIcon from "../assets/Icons/ArrowIcon";
 import Input from "../Component/Input/input";
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
+
+import ValidateIcon from "../assets/Icons/ValidateIcon/ValidateIcon";
+
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -30,10 +33,16 @@ function AccountNameScreen() {
           </Text>
           <View style={styles.input_surname}>
             <Input placeholder={"Prénom"} />
+            <View style={styles.ValidateIcon}>
+              <ValidateIcon />
+            </View>
           </View>
           <View style={styles.wrapper_input_name}>
             <View style={styles.input_name}>
               <Input placeholder={"Nom"} />
+              <View style={styles.ValidateIcon}>
+                <ValidateIcon />
+              </View>
             </View>
           </View>
         </View>
@@ -112,7 +121,7 @@ const styles = StyleSheet.create({
   btn: {
     height: normalize(42),
     borderRadius: normalize(26),
-    backgroundColor: Colors.btn_AccountScreen,
+    backgroundColor: Colors.btn_AccountScreenValidate,
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: normalize(70),
@@ -123,6 +132,9 @@ const styles = StyleSheet.create({
     // font-family: Open Sans Regular;
     fontSize: normalize(16),
     width: normalize(72),
+  },
+  ValidateIcon: {
+    paddingRight: normalize(15),
   },
 });
 

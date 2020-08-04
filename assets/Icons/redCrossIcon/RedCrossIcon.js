@@ -1,9 +1,9 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
+import normalize from "react-native-normalize";
 
-export default function RedCrossIcon() {
-
-    const RedCrossIcon =`<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+export default function RedCrossIcon({ width, height }) {
+  const RedCrossIcon = `<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>B42B4EAE-E15B-4E29-9E50-9440EE15BC90</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="1.1-Log-in" transform="translate(-331.000000, -311.000000)" stroke="#FC0107">
@@ -16,7 +16,13 @@ export default function RedCrossIcon() {
 </svg>
 `;
 
-    const RedCrossIconSvg = () => <SvgXml xml={RedCrossIcon} width="13px" height="13px"  />;
+  const RedCrossIconSvg = () => (
+    <SvgXml
+      xml={RedCrossIcon}
+      width={(width = normalize(13))}
+      height={(height = normalize(13))}
+    />
+  );
 
-    return <RedCrossIconSvg />;
+  return <RedCrossIconSvg />;
 }

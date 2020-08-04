@@ -1,121 +1,76 @@
-import React, { Component } from "react";
-import {
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  Image,
-  TextInput,
-} from "react-native";
+import React from "react";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export class CreateMyAccountPictureScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.wrapper_top}>
-          <View style={{ display: "flex" }}>
-            <Text style={styles.title}>Créer mon compte</Text>
-          </View>
-        </View>
-        <View style={styles.wrapper_bottom}>
-          <View style={styles.first_bloc}>
-            <Text style={styles.title}>choisir ma photo </Text>
-            <Text style={styles.text}>
-              Vous aurez plus de chance d’échanger avec votre photo !
-            </Text>
-          </View>
-          <View style={styles.second_bloc}>
-            <Text style={styles.sub_picture}>Prenom_N</Text>
-          </View>
-          <View style={styles.third_bloc}>
-            <View>
-              <TouchableOpacity style={styles.btn_add_picture}>
-                <Text style={styles.btn_first_text}>Ajouter une photo</Text>
-              </TouchableOpacity>
-            </View>
-            <View>
-              <TouchableOpacity style={styles.btn_next}>
-                <Text style={styles.btn_second_text}>Passer</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
+import ArrowIcon from "../assets/Icons/ArrowIcon";
+import AccountPictureIcon from "../assets/Icons/AccountPictureIcon";
+
+import Input from "../Component/Input/input";
+import Colors from "../assets/Style/Colors";
+import normalize from "react-native-normalize";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
+
+function AccountPictureScreen() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.wrapper_top}>
+        <TouchableOpacity>
+          <ArrowIcon />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.wrapper_green_line}>
+        <Text style={styles.green_line}>-</Text>
+      </View>
+      <View style={styles.wrapper_bottom}>
+        <Text style={styles.choose_picture}>choisir ma photo </Text>
+        <Text style={styles.more_chance_picture}>
+          Vous aurez plus de chance d’échanger avec votre photo !
+        </Text>
+        <View style={styles.icon}>
+          <AccountPictureIcon />
         </View>
       </View>
-    );
-  }
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {},
   wrapper_top: {
-    backgroundColor: "#40CE6A",
-    height: 70,
+    backgroundColor: Colors.main_green,
+    height: normalize(70),
+    paddingTop: normalize(31),
+    paddingLeft: normalize(11),
+  },
+  wrapper_green_line: {
+    paddingTop: normalize(10),
+  },
+  green_line: {
+    backgroundColor: Colors.main_green,
+    lineHeight: normalize(2),
   },
   wrapper_bottom: {
-    marginHorizontal: 15,
+    marginHorizontal: normalize(15),
+    height: hp("82%"),
+    paddingTop: normalize(30),
   },
-  first_bloc: {
-    marginVertical: 44,
+  choose_picture: {
+    color: Colors.main_green,
+    fontSize: normalize(16),
+    // font-family: Open Sans Bold;
   },
-  Title: {
-    width: 133,
-    color: "#40CE6A",
-    // font-family: Avenir;
-    fontSize: 16,
-    fontWeight: "bold", // font-weight: 900;
-    letterSpacing: 0,
-    lineHeight: 20,
+  more_chance_picture: {
+    marginVertical: normalize(11),
+    color: Colors.main_grey,
+    fontSize: normalize(12),
+    width: normalize(309),
+    // font-family: Open Sans Regular;
   },
-  text: {
-    marginVertical: 11,
-    fontSize: 12,
-  },
-  second_bloc: {
-    marginVertical: 62,
+  icon: {
+    paddingTop: normalize(43),
     alignItems: "center",
-  },
-  sub_picture: {},
-  third_bloc: {
-    marginVertical: 271,
-    alignItems: "center",
-  },
-  btn_add_picture: {
-    // box-sizing: border-box,
-    height: 42,
-    width: 236,
-    // border:  "#0091FF",
-    borderRadius: 26,
-    backgroundColor: "#0091FF",
-  },
-  btn_first_text: {
-    height: 20,
-    color: "white",
-    // font-family: Avenir; font payante
-    fontSize: 16,
-    fontWeight: "bold", // fontWeight: 300,
-    letterSpacing: 0,
-    alignSelf: "center",
-  },
-  btn_next: {
-    // box-sizing: border-box;
-    height: 42,
-    width: 236,
-    // border: 1px solid #0091FF;
-    borderRadius: 26,
-    borderColor: "#0091FF",
-    backgroundColor: "white",
-  },
-  btn_second_text: {
-    height: 20,
-    width: 48,
-    color: "#0091FF",
-    // font-family: Avenir;
-    fontSize: 16,
-    fontWeight: "bold", // font-weight: 300;
-    letterSpacing: 0,
-    lineHeight: 20,
-    textAlign: "center",
   },
 });
 
-export default CreateMyAccountPictureScreen;
+export default AccountPictureScreen;
