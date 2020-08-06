@@ -26,7 +26,7 @@ function AccountFinishScreen() {
       </View>
       <View style={styles.wrapper_bottom}>
         <View>
-          <Text style={styles.to_finish}>Pour finir ! </Text>
+          <Text style={styles.to_finish}>Pour finir !</Text>
           <Text style={styles.gender}>Vous êtes </Text>
           <View style={styles.wrapper_gender_man}>
             <Checkbox status="Unchecked" />
