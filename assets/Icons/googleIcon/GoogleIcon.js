@@ -1,9 +1,8 @@
-import React from "react";
-import { SvgXml } from "react-native-svg";
+import React from "./node_modules/react";
+import { SvgXml } from "./node_modules/react-native-svg";
 
 export default function GoogleIcon() {
-
-    const GoogleIcon =`<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  const GoogleIcon = `<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>CFBA22A7-CB84-4FB6-9DE6-265AA4694A4C</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="1-Log-in" transform="translate(-99.000000, -457.000000)" fill-rule="nonzero">
@@ -17,7 +16,9 @@ export default function GoogleIcon() {
     </g>
 </svg>`;
 
-    const GoogleIconSvg = () => <SvgXml xml={GoogleIcon} width="20px" height="20px"  />;
+  const GoogleIconSvg = () => (
+    <SvgXml xml={GoogleIcon} width="20px" height="20px" />
+  );
 
-    return <GoogleIconSvg />;
+  return <GoogleIconSvg />;
 }
