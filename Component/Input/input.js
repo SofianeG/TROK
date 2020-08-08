@@ -1,33 +1,32 @@
-import React from 'react'
-import { View ,TextInput,StyleSheet} from 'react-native'
+import React from "react";
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  ImagePropTypes,
+  processColor,
+} from "react-native";
 
-import normalize from 'react-native-normalize'
+import normalize from "react-native-normalize";
 
-const Input= ({value}) => {
-    return (
-        <View style={styles.inputContainer}>
-        <TextInput 
-        placeholder={value} 
-        style={value}
+const Input = ({ placeholder, style }) => {
+  return (
+    <View>
+      <TextInput
+        placeholder={placeholder}
+        style={([styles.input], { fontSize: normalize(12) })}
         autoCapitalize={"none"}
-        autoCorrect={false} 
+        autoCorrect={false}
         underlineColorAndroid="transparent"
-        />
-        </View>
+      />
+    </View>
+  );
+};
 
-    )
-}
+export default Input;
 
-export default Input
-
-
-const styles=StyleSheet.create({
-
-    inputContainer:{
-    borderWidth: normalize(1),
-    borderColor:"#BFBDBD",
-    height:normalize(42,'height'),
-    borderRadius: normalize(1),
-    paddingLeft:normalize(12),
-    width:normalize(344,'width'),
-}})
+const styles = StyleSheet.create({
+  input: {
+    height: normalize(20, "height"),
+  },
+});
