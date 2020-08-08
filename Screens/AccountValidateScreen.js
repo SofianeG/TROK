@@ -9,8 +9,8 @@ import {
 
 import ValidateIcon from "../assets/Icons/ValidateIcon/ValidateIcon";
 import EyeIcon from "../assets/Icons/EyeIcon";
-import ArrowIcon from "../assets/Icons/ArrowIcon";
 
+import Header from "../Component/Header";
 import Input from "../Component/Input/input";
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
@@ -22,11 +22,7 @@ import {
 function AccountValidateScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.wrapper_top}>
-        <TouchableOpacity>
-          <ArrowIcon />
-        </TouchableOpacity>
-      </View>
+      <Header />
       <View style={styles.wrapper_green_line}>
         <Text style={styles.green_line}>-</Text>
       </View>
@@ -83,12 +79,6 @@ function AccountValidateScreen() {
 }
 
 const styles = StyleSheet.create({
-  wrapper_top: {
-    backgroundColor: Colors.main_green,
-    height: normalize(70),
-    paddingTop: normalize(31),
-    paddingLeft: normalize(11),
-  },
   wrapper_green_line: {
     paddingTop: normalize(10),
   },

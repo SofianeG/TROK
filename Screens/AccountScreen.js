@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import RedCrossIcon from "../assets/Icons/RedCrossIcon/RedCrossIcon";
 import EyeIcon from "../assets/Icons/EyeIcon";
-import ArrowIcon from "../assets/Icons/ArrowIcon";
 
+import Header from "../Component/Header";
 import Input from "../Component/Input/input";
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
@@ -22,11 +16,7 @@ import {
 function AccountScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.wrapper_top}>
-        <TouchableOpacity>
-          <ArrowIcon />
-        </TouchableOpacity>
-      </View>
+      <Header />
       <View style={styles.wrapper_green_line}>
         <Text style={styles.green_line}>-</Text>
       </View>
@@ -83,12 +73,6 @@ function AccountScreen() {
 }
 
 const styles = StyleSheet.create({
-  wrapper_top: {
-    backgroundColor: Colors.main_green,
-    height: normalize(70),
-    paddingTop: normalize(31),
-    paddingLeft: normalize(11),
-  },
   wrapper_green_line: {
     paddingTop: normalize(10),
   },
