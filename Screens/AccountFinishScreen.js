@@ -4,7 +4,9 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
 
-import Header from "../Component/Header";
+import Header from "../Component/Header/Header";
+import Btn from "../Component/Btn/Btn";
+import { Checkbox } from "react-native-paper";
 
 import {
   widthPercentageToDP as wp,
@@ -35,13 +37,10 @@ function AccountFinishScreen() {
             </View>
           </View>
         </View>
-      </View>
-      <View>
-        <TouchableOpacity>
-          <View style={styles.btn}>
-            <Text style={styles.btn_text}>Terminer</Text>
-          </View>
-        </TouchableOpacity>
+        <Btn
+          text="Terminer"
+          backgroundColor={Colors.btn_AccountScreenValidate}
+        />
       </View>
     </View>
   );
@@ -95,21 +94,6 @@ const styles = StyleSheet.create({
   woman: {
     fontSize: normalize(12),
     // font-family: Open Sans Regular;
-  },
-  btn: {
-    height: normalize(42),
-    borderRadius: normalize(26),
-    backgroundColor: Colors.btn_AccountScreenValidate,
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: normalize(70),
-  },
-  btn_text: {
-    marginHorizontal: normalize(80),
-    color: Colors.main_white,
-    // font-family: Open Sans Regular;
-    fontSize: normalize(16),
-    width: normalize(72),
   },
 });
 
