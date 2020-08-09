@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-import Header from "../Component/Header";
-
+import Header from "../Component/Header/Header";
+import Btn from "../Component/Btn/Btn";
 import Input from "../Component/Input/input";
 import Colors from "../assets/Style/Colors";
 
@@ -44,11 +44,11 @@ function AccountNameScreen() {
           </View>
         </View>
         <View>
-          <TouchableOpacity>
-            <View style={styles.btn}>
-              <Text style={styles.btn_text}>Continuer</Text>
-            </View>
-          </TouchableOpacity>
+          <Btn
+            text="Continuer"
+            backgroundColor={Colors.btn_AccountScreenValidate}
+            color={Colors.main_white}
+          />
         </View>
       </View>
     </View>

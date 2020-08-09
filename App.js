@@ -1,9 +1,9 @@
 import React from "react";
 import {} from "react-native";
 
-import AccountNameScreen from "./Screens/AccountNameScreen";
+import AccountNameValidateScreen from "./Screens/AccountNameValidateScreen";
 function App() {
-  return <AccountNameScreen />;
+  return <AccountNameValidateScreen />;
 }
 
 export default App;

@@ -13,7 +13,7 @@ const Btn = (props) => {
         style={[
           styles.btn,
           {
-            backgroundColor: props.Colors,
+            backgroundColor: props.backgroundColor,
           },
         ]}
       >
@@ -21,8 +21,8 @@ const Btn = (props) => {
           style={[
             styles.btn_text,
             {
-              backgroundColor: props.Colors,
-              color: props.Colors,
+              backgroundColor: props.backgroundColor,
+              color: props.color,
             },
           ]}
         >

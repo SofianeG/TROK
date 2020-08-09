@@ -39,7 +39,7 @@ function AccountNameScreen() {
           <Btn
             text="Continuer"
             color={Colors.main_white}
-            backgroundColor={Colors.main_green}
+            backgroundColor={Colors.btn_AccountScreenValidate}
           />
         </View>
       </View>
