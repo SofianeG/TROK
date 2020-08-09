@@ -5,7 +5,8 @@ import Input from "../Component/Input/input";
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
 
-import Header from "../Component/Header";
+import Header from "../Component/Header/Header";
+import Btn from "../Component/Btn/Btn";
 
 import {
   widthPercentageToDP as wp,
@@ -35,11 +36,11 @@ function AccountNameScreen() {
           </View>
         </View>
         <View>
-          <TouchableOpacity>
-            <View style={styles.btn}>
-              <Text style={styles.btn_text}>Continuer</Text>
-            </View>
-          </TouchableOpacity>
+          <Btn
+            text="Continuer"
+            color={Colors.main_white}
+            backgroundColor={Colors.main_green}
+          />
         </View>
       </View>
     </View>
@@ -99,21 +100,6 @@ const styles = StyleSheet.create({
   },
   wrapper_input_name: {
     paddingTop: normalize(16),
-  },
-  btn: {
-    height: normalize(42),
-    borderRadius: normalize(26),
-    backgroundColor: Colors.btn_AccountScreen,
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: normalize(70),
-  },
-  btn_text: {
-    marginHorizontal: normalize(80),
-    color: Colors.main_white,
-    // font-family: Open Sans Regular;
-    fontSize: normalize(16),
-    width: normalize(72),
   },
 });
 
