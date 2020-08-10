@@ -1,9 +1,9 @@
 import React from "react";
 
 import { View, StyleSheet, TouchableOpacity } from "react-native";
-import ArrowIcon from "../assets/Icons/ArrowIcon";
+import ArrowIcon from "../../assets/Icons/ArrowIcon";
 
-import Colors from "../assets/Style/Colors";
+import Colors from "../../assets/Style/Colors";
 
 import normalize from "react-native-normalize";
 
