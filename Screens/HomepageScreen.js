@@ -7,12 +7,12 @@ import normalize from "react-native-normalize";
 import Trokeo from "../assets/Icons/HomepageIcon/TrokeoIcon";
 import Notification from "../assets/Icons/HomepageIcon/NotificationIcon";
 import Search from "../assets/Icons/HomepageIcon/SearchIcon";
-import Map from "../assets/Icons/";
+import Map from "../assets/Icons/HomepageIcon/MapIcon";
 
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+// import {
+//   widthPercentageToDP as wp,
+//   heightPercentageToDP as hp,
+// } from "react-native-responsive-screen";
 
 function HomepageScreen() {
   return (
@@ -36,6 +36,9 @@ function HomepageScreen() {
       </View>
       <View>
         <Text>Trouvez des annonces près de chez vous </Text>
+        <Map />
+        <Btn text="Activer la géolocalisation" />
+        <Text>Saisir une ville</Text>
       </View>
     </View>
   );
