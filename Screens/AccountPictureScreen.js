@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   },
   icon_name_person: {
     paddingTop: normalize(11),
+    fontSize: normalize(14),
     color: Colors.main_grey,
   },
   move_on: {
