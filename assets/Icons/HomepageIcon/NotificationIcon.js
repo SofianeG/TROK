@@ -19,7 +19,7 @@ export default function NotificationIcon({ width, height }) {
   const NotificationIconSvg = () => (
     <SvgXml
       xml={NotificationIcon}
-      width={(width = normalize(22))}
+      width={(width = normalize(23))}
       height={(height = normalize(28))}
     />
   );

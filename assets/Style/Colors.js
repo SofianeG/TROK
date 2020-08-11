@@ -6,4 +6,5 @@ export default {
   main_input: "#BFBDBD",
   main_grey: "#3A3A3A",
   main_white: "#FFFFFF",
+  homepage_section_services: "#BFBDBD",
 };
