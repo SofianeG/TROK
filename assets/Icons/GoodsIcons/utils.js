@@ -1,9 +1,8 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
 
-export default function outils() {
-
-    const outils =`<svg width="38px" height="37px" viewBox="0 0 38 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+export default function utils() {
+  const utils = `<svg width="38px" height="37px" viewBox="0 0 38 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>EE7C8EA6-A15B-4EE4-AD75-99E77EECE938</title>
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="UI-KIT" transform="translate(-1596.000000, -505.000000)" stroke="#FFFFFF">
@@ -12,7 +11,7 @@ export default function outils() {
     </g>
 </svg>`;
 
-    const outilsSvg = () => <SvgXml xml={outils} width="60%" height="60%"  />;
+  const utilsSvg = () => <SvgXml xml={utils} width="60%" height="60%" />;
 
-    return <outilsSvg />;
+  return <utilsSvg />;
 }
