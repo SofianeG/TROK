@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import Colors from "../assets/Style/Colors";
@@ -15,10 +15,10 @@ import EnvelopeIcon from "../assets/Icons/HomepageIcon/EnvelopeIcon";
 
 import Btn from "../Component/Btn/Btn";
 
-// import {
-//   widthPercentageToDP as wp,
-//   heightPercentageToDP as hp,
-// } from "react-native-responsive-screen";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 function HomepageScreen() {
   return (
@@ -28,95 +28,109 @@ function HomepageScreen() {
           <Trokeo />
         </View>
         <View style={{ flexDirection: "row" }}>
-          <Search />
-          <Notification />
+          <TouchableOpacity>
+            <Search />
+          </TouchableOpacity>
+          <View style={{ paddingLeft: normalize(20.22) }}>
+            <TouchableOpacity>
+              <Notification />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-      <View
-        style={{
-          flexDirection: "row",
-        }}
-      >
+      <View style={{ height: hp("91.73%") }}>
         <View
           style={{
-            width: "50%",
-            paddingLeft: normalize(72),
-            marginVertical: normalize(19),
+            flexDirection: "row",
           }}
         >
-          <Text
+          <View
             style={{
-              color: Colors.main_green,
-              fontSize: normalize(16),
+              width: "50%",
+              paddingLeft: normalize(72),
+              marginVertical: normalize(19),
             }}
           >
-            Biens
-          </Text>
+            <TouchableOpacity>
+              <Text
+                style={{
+                  color: Colors.main_green,
+                  fontSize: normalize(16),
+                }}
+              >
+                Biens
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              width: "50%",
+              marginVertical: normalize(19),
+              alignItems: "center",
+            }}
+          >
+            <TouchableOpacity>
+              <Text
+                style={{
+                  color: Colors.homepage_section_services,
+                  fontSize: normalize(16),
+                }}
+              >
+                Services
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View
+        <Text
           style={{
-            width: "50%",
-            marginVertical: normalize(19),
-            alignItems: "center",
+            backgroundColor: Colors.main_green,
+            height: normalize(2),
+            width: normalize(188),
           }}
         >
-          <Text
-            style={{
-              color: Colors.homepage_section_services,
-              fontSize: normalize(16),
-            }}
-          >
-            Services
-          </Text>
+          -
+        </Text>
+        <View>
+          <View style={{ alignItems: "center", marginTop: hp("13.66%") }}>
+            <Text style={{ color: Colors.main_grey, fontSize: normalize(14) }}>
+              Trouvez des annonces près de chez vous
+            </Text>
+          </View>
+          <View style={{ alignItems: "center", marginVertical: normalize(31) }}>
+            <Map />
+          </View>
+          <Btn
+            text="Activer la géolocalisation"
+            backgroundColor={Colors.btn_AccountScreenValidate}
+            color={Colors.main_white}
+            fontSize={normalize(16)}
+          />
+          <View style={{ alignItems: "center", paddingTop: hp("3.20%") }}>
+            <TouchableOpacity>
+              <Text
+                style={{
+                  textDecorationLine: "underline",
+                  color: Colors.btn_AccountScreenValidate,
+                }}
+              >
+                Saisir une ville
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
-      <Text
-        style={{
-          backgroundColor: Colors.main_green,
-          height: normalize(2),
-          width: normalize(188),
-        }}
-      >
-        -
-      </Text>
-      <View>
-        <View style={{ alignItems: "center", paddingTop: normalize(111) }}>
-          <Text style={{ color: Colors.main_grey, fontSize: normalize(14) }}>
-            Trouvez des annonces près de chez vous
-          </Text>
-        </View>
-        <View style={{ alignItems: "center", marginVertical: 31 }}>
-          <Map />
-        </View>
-        <Btn
-          text="Activer la géolocalisation"
-          backgroundColor={Colors.btn_AccountScreenValidate}
-          color={Colors.main_white}
-          fontSize={normalize(16)}
-        />
-
-        <View style={{ alignItems: "center", paddingTop: 26 }}>
-          <Text
-            style={{
-              textDecorationLine: "underline",
-              color: Colors.btn_AccountScreenValidate,
-            }}
-          >
-            Saisir une ville
-          </Text>
-        </View>
-      </View>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          paddingTop: normalize(189),
-        }}
-      >
-        <HouseIcon />
-        <HandshakeIcon />
-        <AddIcon />
-        <EnvelopeIcon />
+        {/* <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-around",
+            backgroundColor: "#FFFF",
+            height: hp("30%"),
+          }}
+        >
+          <HouseIcon />
+          <HandshakeIcon />
+          <AddIcon />
+          <EnvelopeIcon />
+        </View> */}
       </View>
     </View>
   );
@@ -130,7 +144,7 @@ const styles = StyleSheet.create({
     paddingLeft: normalize(11),
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingRight: 16.78,
+    paddingRight: normalize(16.78),
   },
 });
 

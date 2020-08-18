@@ -13,8 +13,8 @@ export default function SearchIcon({ width, height }) {
     <g id="Android-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="icons8-search" transform="translate(-207.000000, -66.000000)" filter="url(#filter-1)">
             <g transform="translate(208.000000, 67.000000)">
-                <path d="M9.5,0 C4.25329488,0 0,4.4771525 0,10 C0,15.5228475 4.25329488,20 9.5,20 C14.7467051,20 19,15.5228475 19,10 C19,4.4771525 14.7467051,0 9.5,0 Z" id="Path" stroke="#5F5F5F" stroke-linecap="round"></path>
-                <line x1="17" y1="17" x2="24" y2="25" id="Path" stroke="#5F5F5F"></line>
+                <path d="M9.5,0 C4.25329488,0 0,4.4771525 0,10 C0,15.5228475 4.25329488,20 9.5,20 C14.7467051,20 19,15.5228475 19,10 C19,4.4771525 14.7467051,0 9.5,0 Z" id="Path" stroke="#FFFFFF" stroke-linecap="round"></path>
+                <line x1="17" y1="17" x2="24" y2="25" id="Path" stroke="#FFFFFF"></line>
             </g>
         </g>
     </g>
