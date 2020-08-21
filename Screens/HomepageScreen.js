@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+
 import Colors from "../assets/Style/Colors";
 import normalize from "react-native-normalize";
 
-import { Location, Permissions } from "expo";
 import Trokeo from "../assets/Icons/HomepageIcon/TrokeoIcon";
 import Notification from "../assets/Icons/HomepageIcon/NotificationIcon";
 import Search from "../assets/Icons/HomepageIcon/SearchIcon";
@@ -104,6 +104,9 @@ function HomepageScreen() {
             backgroundColor={Colors.btn_AccountScreenValidate}
             color={Colors.main_white}
             fontSize={normalize(16)}
+            onPress={() =>
+              this.props.navigation.navigate("HomepageCardGoodsScreen")
+            }
           />
           <View style={{ alignItems: "center", paddingTop: hp("3.20%") }}>
             <TouchableOpacity>

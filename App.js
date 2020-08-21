@@ -1,10 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createSwitchNavigator } from "react-navigation";
 
+// import Homepage from "./Screens/HomepageScreen";
 import HomepageScreen from "./Screens/HomepageScreen";
+// import HomepageCardGood from "./Screens/HomepageCardGoodsScreen";
 
 import HouseIcon from "./assets/Icons/HomepageIcon/HouseIcon";
 import HouseIconFocused from "./assets/Icons/HomepageIcon/HouseIconFocused";
